@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Henry Baraka Hardware</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#f68b1e">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" class="logo">Koem<span>Hardware</span></a>
+    <button id="menuToggle" class="menu-toggle">☰</button>
+    <nav class="nav" id="navMenu">
+      <a href="index.html" class="active">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button id="installBtn" class="btn small">Install App</button>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Koem Hardware</h1>
+      <p>Your one-stop shop for construction & farm tools.</p>
+      <a href="products.html" class="btn">Shop Now</a>
+    </div>
+  </section>
+
+  <section class="featured-products">
+    <h2>Featured Products</h2>
+    <div class="grid">
+
+      <div class="card">
+        <img src="https://i.imgur.com/n9Lys5z.jpg" alt="Cement 50kg Bag">
+        <h3>Cement 50kg Bag</h3>
+        <p>KSh 850</p>
+        <a href="#" onclick="orderViaWhatsApp('Cement', '850')" class="btn small">Buy on WhatsApp</a>
+      </div>
+
+      <div class="card">
+        <img src="https://i.imgur.com/4wFQ2FV.jpg" alt="Steel Hammer">
+        <h3>Steel Hammer</h3>
+        <p>KSh 450</p>
+        <a href="#" onclick="orderViaWhatsApp('Steel Hammer', '450')" class="btn small">Buy on WhatsApp</a>
+      </div>
+
+      <div class="card">
+        <img src="https://i.imgur.com/N9rBvZC.jpg" alt="Electric Drill 18V">
+        <h3>Electric Drill 18V</h3>
+        <p>KSh 8,499</p>
+        <a href="#" onclick="orderViaWhatsApp('Electric Drill 18V', '8499')" class="btn small">Buy on WhatsApp</a>
+      </div>
+
+      <div class="card">
+        <img src="https://i.imgur.com/fG3mB0S.jpg" alt="Wheelbarrow">
+        <h3>Wheelbarrow</h3>
+        <p>KSh 6,800</p>
+        <a href="#" onclick="orderViaWhatsApp('Wheelbarrow', '6800')" class="btn small">Buy on WhatsApp</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Henry Baraka Hardware | All Rights Reserved</p>
+  </footer>
+
+  <a href="https://wa.me/254762048809" target="_blank" class="whatsapp-float">💬</a>
+</body>
+</html>

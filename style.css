@@ -1,0 +1,279 @@
+/* ==============================
+   Koem Hardware Stylesheet
+   Responsive Multi-Page Design
+   ============================== */
+
+:root {
+  --primary: #f68b1e;
+  --primary-dark: #e67a13;
+  --dark: #1f1f1f;
+  --light: #f7f3e9;
+  --gray: #fdfcee;
+  --shadow: 0 6px 15px rgba(0,0,0,0.12);
+  --radius: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--gray);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* --- Header --- */
+.header {
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  position: relative;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: white;
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--dark);
+  background: white;
+  padding: 2px 6px;
+  border-radius: var(--radius);
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  transition: 0.3s;
+}
+
+.nav a.active,
+.nav a:hover {
+  background: var(--light);
+  color: var(--primary-dark);
+}
+
+/* Hamburger menu for mobile */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 1200px;
+  gap: 2rem;
+}
+
+.hero img {
+  border-radius: var(--radius);
+  width: 100%;
+  max-width: 400px;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn.primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn.primary:hover {
+  background: var(--primary-dark);
+}
+
+.btn.small {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+}
+
+.btn.large {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+}
+
+/* Featured / Product Grid */
+.featured,
+.products {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.featured h2,
+.page-header h1 {
+  text-align: center;
+  color: var(--dark);
+  margin-bottom: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card img {
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+}
+
+.card h3 {
+  margin: 0.5rem 1rem;
+}
+
+.card p {
+  margin: 0.2rem 1rem 1rem 1rem;
+}
+
+.card .price {
+  font-weight: bold;
+  color: var(--primary);
+  margin: 0 1rem 1rem 1rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Page Headers */
+.page-header {
+  text-align: center;
+  padding: 2rem 0 1rem 0;
+}
+
+.page-header p {
+  color: #555;
+}
+
+/* Footer */
+footer {
+  background: var(--dark);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+footer a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--primary);
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  font-size: 1.8rem;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero img {
+    max-width: 100%;
+  }
+
+  .nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: var(--primary-dark);
+    flex-direction: column;
+    width: 200px;
+    display: none;
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .nav a {
+    padding: 1rem;
+    border-bottom: 1px solid #fff;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+}
